@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe all experience cards and service cards
-    const experienceCards = document.querySelectorAll('.experience-card');
+    // Observe all experience cards, service cards, and resume elements
+    const experienceCards = document.querySelectorAll('.experience-card, .resume-section-block, .skill-category, .language-item');
     const serviceCards = document.querySelectorAll('.service-card');
     
     [...experienceCards, ...serviceCards].forEach(card => {
