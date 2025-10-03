@@ -63,9 +63,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe all service cards
+    // Observe all experience cards and service cards
+    const experienceCards = document.querySelectorAll('.experience-card');
     const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
+    
+    [...experienceCards, ...serviceCards].forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

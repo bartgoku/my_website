@@ -81,6 +81,15 @@ header {
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
 .cta-button {
     background-color: #e74c3c;
     color: white;
@@ -90,11 +99,57 @@ header {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: fadeInUp 1s ease-out 0.4s both;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
     background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.linkedin-button {
+    background-color: #0077b5;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.linkedin-button:hover {
+    background-color: #005885;
+    transform: translateY(-2px);
+}
+
+.linkedin-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.ilionx-button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ilionx-button:hover {
+    background-color: #1a252f;
     transform: translateY(-2px);
 }
 
@@ -112,6 +167,81 @@ header {
     margin-bottom: 3rem;
     font-size: 2.5rem;
     color: #2c3e50;
+}
+
+/* Story Content */
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.story-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text p {
+    margin-bottom: 0;
+}
+
+/* Experience Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.experience-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.experience-card h4 {
+    color: #0077b5;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.experience-card p {
+    line-height: 1.6;
 }
 
 /* Services Grid */
@@ -153,6 +283,17 @@ header {
     font-size: 1.1rem;
 }
 
+.contact-info a {
+    color: #0077b5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #005885;
+    text-decoration: underline;
+}
+
 /* Footer */
 footer {
     background-color: #2c3e50;
@@ -192,8 +333,29 @@ footer {
         padding: 120px 0 80px;
     }
     
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
     .services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        align-self: center;
     }
     
     .section {
@@ -212,5 +374,26 @@ footer {
     
     .section h2 {
         font-size: 2rem;
+    }
+    
+    .cta-button, .linkedin-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .ilionx-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
 }
