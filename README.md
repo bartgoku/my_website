@@ -2,7 +2,7 @@
 
 A clean, responsive website template built with HTML, CSS, and JavaScript.
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen)](https://your-username.github.io/your-repo-name)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen)](https://bartgoku.github.io/my_website)
 
 ## Features
 
@@ -61,7 +61,7 @@ GitHub Pages provides free hosting for static websites directly from your GitHub
    - Choose "main" branch and "/ (root)" folder
    - Click "Save"
 3. **Access Your Website**:
-   - Your site will be available at: `https://your-username.github.io/repository-name`
+   - Your site will be available at: `https://bartgoku.github.io/my_website`
    - It may take a few minutes to deploy
 
 ### Option 2: YourHosting.nl (Your Purchased Domain)
