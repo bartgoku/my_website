@@ -2,6 +2,8 @@
 
 A clean, responsive website template built with HTML, CSS, and JavaScript.
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-brightgreen)](https://your-username.github.io/your-repo-name)
+
 ## Features
 
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
@@ -42,7 +44,27 @@ Website/
 - **Analytics**: Add Google Analytics or other tracking
 - **Additional Pages**: Create more HTML files for additional pages
 
-## Deployment to YourHosting.nl
+## Deployment Options
+
+You have two main options for hosting your website:
+
+### Option 1: GitHub Pages (Free Hosting)
+GitHub Pages provides free hosting for static websites directly from your GitHub repository.
+
+#### Setup GitHub Pages:
+1. **Create GitHub Repository** (see instructions below)
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Click on "Settings" tab
+   - Scroll down to "Pages" section
+   - Under "Source", select "Deploy from a branch"
+   - Choose "main" branch and "/ (root)" folder
+   - Click "Save"
+3. **Access Your Website**:
+   - Your site will be available at: `https://your-username.github.io/repository-name`
+   - It may take a few minutes to deploy
+
+### Option 2: YourHosting.nl (Your Purchased Domain)
 
 ### Step 1: Prepare Your Files
 1. Make sure all your customizations are complete
@@ -122,6 +144,39 @@ To continue developing your website locally:
 - **YourHosting.nl Support**: Contact their support team for hosting-related issues
 - **HTML/CSS Help**: Use resources like MDN Web Docs or W3Schools
 - **VS Code Extensions**: Install "Live Server" extension for local development
+
+---
+
+## GitHub Repository Setup
+
+### Step 1: Create GitHub Repository
+1. **Go to GitHub**: Visit [github.com](https://github.com) and sign in (create account if needed)
+2. **Create New Repository**:
+   - Click the "+" icon in the top right corner
+   - Select "New repository"
+   - Choose a repository name (e.g., "my-website", "portfolio", etc.)
+   - Make it **Public** (required for free GitHub Pages)
+   - **Don't** initialize with README (we already have one)
+   - Click "Create repository"
+
+### Step 2: Connect Local Repository to GitHub
+Run these commands in your terminal (replace `YOUR_USERNAME` and `YOUR_REPO_NAME`):
+
+```bash
+# Add GitHub repository as remote origin
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+
+# Push your code to GitHub
+git push -u origin main
+```
+
+### Step 3: Update Repository Links
+After creating your GitHub repository, update these placeholders in your README:
+- Replace `your-username` with your GitHub username
+- Replace `your-repo-name` with your repository name
+
+### Step 4: Enable GitHub Pages (Optional)
+Follow the GitHub Pages instructions above to get free hosting.
 
 ---
 
