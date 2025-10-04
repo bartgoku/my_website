@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games voor Kinderen - Bart van Es</title>
+    <meta name="description" content="Leuke spelletjes voor kinderen - Tetris en meer games">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">Bart van Es</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">Mijn Verhaal</a></li>
+                    <li><a href="index.html#experience">Ervaring</a></li>
+                    <li><a href="index.html#resume">CV</a></li>
+                    <li><a href="games.html" class="active">Ties</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="games-hero">
+            <div class="container">
+                <h1>Spelletjes voor Ties</h1>
+                <p>Leuke games om te spelen!</p>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <div class="container">
+                <div class="games-grid">
+                    <!-- Tetris Game -->
+                    <div class="game-card">
+                        <h2>Tetris</h2>
+                        <p>Het klassieke blokken spel!</p>
+                        <div class="tetris-container">
+                            <canvas id="tetris" width="300" height="600"></canvas>
+                            <div class="game-info">
+                                <div class="next-piece-container">
+                                    <h3>Volgende:</h3>
+                                    <canvas id="nextPiece" width="100" height="80"></canvas>
+                                </div>
+                                <div class="score">Score: <span id="score">0</span></div>
+                                <div class="level">Level: <span id="level">1</span></div>
+                                <div class="lines">Lines: <span id="lines">0</span></div>
+                                <button id="startBtn" class="game-btn">Start Game</button>
+                                <button id="pauseBtn" class="game-btn">Pause</button>
+                                <button id="muteBtn" class="game-btn">Mute Music</button>
+                                <div class="controls">
+                                    <h3>Controls:</h3>
+                                    <p>← → Bewegen</p>
+                                    <p>↓ Sneller</p>
+                                    <p>↑ Draaien</p>
+                                    <p>Spatie = Drop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Snake Game -->
+                    <div class="game-card">
+                        <h2>Snake</h2>
+                        <p>Verzamel voedsel en wordt langer!</p>
+                        <div class="snake-container">
+                            <canvas id="snakeCanvas" width="400" height="400"></canvas>
+                            <div class="game-info">
+                                <div class="score">Score: <span id="snakeScore">0</span></div>
+                                <button id="snakeStartBtn" class="game-btn">Start Snake</button>
+                                <div class="controls">
+                                    <h3>Controls:</h3>
+                                    <p>← → ↑ ↓ Pijltjes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pac-Man Game -->
+                    <div class="game-card">
+                        <h2>Pac-Man</h2>
+                        <p>Eet alle punten en ontloop de spoken!</p>
+                        <div class="pacman-container">
+                            <canvas id="pacmanCanvas" width="400" height="400"></canvas>
+                            <div class="game-info">
+                                <div class="score">Score: <span id="pacmanScore">0</span></div>
+                                <button id="pacmanStartBtn" class="game-btn">Start Pac-Man</button>
+                                <div class="controls">
+                                    <h3>Controls:</h3>
+                                    <p>← → ↑ ↓ Pijltjes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pong Game -->
+                    <div class="game-card">
+                        <h2>Pong</h2>
+                        <p>Klassiek paddle spel tegen de computer!</p>
+                        <div class="pong-container">
+                            <canvas id="pongCanvas" width="400" height="300"></canvas>
+                            <div class="game-info">
+                                <div class="score">Score: <span id="pongScore">0 - 0</span></div>
+                                <button id="pongStartBtn" class="game-btn">Start Pong</button>
+                                <div class="controls">
+                                    <h3>Controls:</h3>
+                                    <p>↑ ↓ Pijltjes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Game Links Section -->
+                    <div class="game-card link-card">
+                        <h2>Meer Spelletjes</h2>
+                        <p>Klik op de links om naar externe spelletjes te gaan:</p>
+                        <div class="game-links">
+                            <a href="https://poki.nl/g/subway-surfers" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🏃‍♂️ Subway Surfers
+                            </a>
+                            <a href="https://poki.nl/g/temple-run-2" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🏃‍♂️ Temple Run 2
+                            </a>
+                            <a href="https://poki.nl/g/cut-the-rope" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🍬 Cut the Rope
+                            </a>
+                            <a href="https://poki.nl/g/angry-birds-classic" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🐦 Angry Birds
+                            </a>
+                            <a href="https://www.coolmathgames.com/" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🧮 Cool Math Games
+                            </a>
+                            <a href="https://scratch.mit.edu/explore/projects/games/" target="_blank" rel="noopener noreferrer" class="game-link">
+                                🎮 Scratch Games
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Simple Browser Games -->
+                    <div class="game-card">
+                        <h2>Tic Tac Toe</h2>
+                        <p>Klassiek drie op een rij!</p>
+                        <div class="tictactoe-container">
+                            <div id="tictactoe-board" class="tictactoe-board">
+                                <div class="cell" data-index="0"></div>
+                                <div class="cell" data-index="1"></div>
+                                <div class="cell" data-index="2"></div>
+                                <div class="cell" data-index="3"></div>
+                                <div class="cell" data-index="4"></div>
+                                <div class="cell" data-index="5"></div>
+                                <div class="cell" data-index="6"></div>
+                                <div class="cell" data-index="7"></div>
+                                <div class="cell" data-index="8"></div>
+                            </div>
+                            <div class="game-info">
+                                <div class="score">Status: <span id="tictactoe-current">Jouw beurt (X)</span></div>
+                                <button id="tictactoeStartBtn" class="game-btn">Nieuw Spel</button>
+                                <div class="controls">
+                                    <h3>Spelregels:</h3>
+                                    <p>Jij bent X, computer is O</p>
+                                    <p>3 op een rij winnen!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memory Game -->
+                    <div class="game-card">
+                        <h2>Memory Game</h2>
+                        <p>Test je geheugen met kaartjes!</p>
+                        <div class="memory-container">
+                            <div id="memory-board" class="memory-board">
+                                <!-- Cards will be generated by JavaScript -->
+                            </div>
+                            <div class="game-info">
+                                <div class="score">Pogingen: <span id="memory-attempts">0</span></div>
+                                <div class="score">Gevonden: <span id="memory-found">0 / 8</span></div>
+                                <button id="memoryStartBtn" class="game-btn">Nieuw Spel</button>
+                                <div class="controls">
+                                    <h3>Spelregels:</h3>
+                                    <p>Vind alle paren!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bart van Es - Spelletjes voor kinderen</p>
+        </div>
+    </footer>
+
+    <script src="tetris.js"></script>
+    <script src="snake.js"></script>
+    <script src="pacman.js"></script>
+    <script src="pong.js"></script>
+    <script>
+        // Initialize all games when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tic Tac Toe Game - Complete working version
+            class TicTacToeGame {
+                constructor() {
+                    this.gameBoard = ['', '', '', '', '', '', '', '', ''];
+                    this.gameActive = true;
+                    this.isPlayerTurn = true;
+                    this.cells = document.querySelectorAll('.cell');
+                    this.currentPlayerElement = document.getElementById('tictactoe-current');
+                    this.restartBtn = document.getElementById('tictactoeStartBtn');
+                    
+                    this.init();
+                }
+                
+                init() {
+                    // Don't add event listeners here since they're added outside the class
+                    this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                }
+                
+                checkWinner(board = this.gameBoard) {
+                    const winPatterns = [
+                        [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+                        [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+                        [0, 4, 8], [2, 4, 6] // diagonals
+                    ];
+
+                    for (let pattern of winPatterns) {
+                        const [a, b, c] = pattern;
+                        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                            return board[a];
+                        }
+                    }
+
+                    if (!board.includes('')) {
+                        return 'tie';
+                    }
+
+                    return null;
+                }
+                
+                minimax(board, depth, isMaximizing) {
+                    const scores = { 'X': -1, 'O': 1, 'tie': 0 };
+                    
+                    const winner = this.checkWinner(board);
+                    if (winner !== null) {
+                        return scores[winner];
+                    }
+
+                    if (isMaximizing) {
+                        let bestScore = -Infinity;
+                        for (let i = 0; i < 9; i++) {
+                            if (board[i] === '') {
+                                board[i] = 'O';
+                                let score = this.minimax(board, depth + 1, false);
+                                board[i] = '';
+                                bestScore = Math.max(score, bestScore);
+                            }
+                        }
+                        return bestScore;
+                    } else {
+                        let bestScore = Infinity;
+                        for (let i = 0; i < 9; i++) {
+                            if (board[i] === '') {
+                                board[i] = 'X';
+                                let score = this.minimax(board, depth + 1, true);
+                                board[i] = '';
+                                bestScore = Math.min(score, bestScore);
+                            }
+                        }
+                        return bestScore;
+                    }
+                }
+                
+                computerMove() {
+                    if (!this.gameActive || this.isPlayerTurn) return;
+                    
+                    this.currentPlayerElement.textContent = 'Computer denkt...';
+                    
+                    setTimeout(() => {
+                        let bestScore = -Infinity;
+                        let bestMove = 0;
+                        
+                        // Create a copy of the board for minimax
+                        let boardCopy = [...this.gameBoard];
+                        
+                        for (let i = 0; i < 9; i++) {
+                            if (this.gameBoard[i] === '') {
+                                boardCopy[i] = 'O';
+                                let score = this.minimax(boardCopy, 0, false);
+                                boardCopy[i] = '';
+                                if (score > bestScore) {
+                                    bestScore = score;
+                                    bestMove = i;
+                                }
+                            }
+                        }
+                        
+                        this.gameBoard[bestMove] = 'O';
+                        this.cells[bestMove].textContent = 'O';
+                        this.cells[bestMove].style.color = '#ff6b6b';
+                        
+                        const winner = this.checkWinner();
+                        if (winner) {
+                            this.endGame(winner);
+                            return;
+                        }
+                        
+                        this.isPlayerTurn = true;
+                        this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                    }, 500);
+                }
+                
+                handleCellClick(e) {
+                    const index = e.target.dataset.index;
+                    
+                    if (this.gameBoard[index] !== '' || !this.gameActive || !this.isPlayerTurn) return;
+
+                    this.gameBoard[index] = 'X';
+                    e.target.textContent = 'X';
+                    e.target.style.color = '#64ffda';
+
+                    const winner = this.checkWinner();
+                    if (winner) {
+                        this.endGame(winner);
+                        return;
+                    }
+
+                    this.isPlayerTurn = false;
+                    this.computerMove();
+                }
+                
+                endGame(winner) {
+                    this.gameActive = false;
+                    if (winner === 'tie') {
+                        alert('Gelijkspel!');
+                        this.currentPlayerElement.textContent = 'Gelijkspel!';
+                    } else if (winner === 'X') {
+                        alert('Je hebt gewonnen! 🎉');
+                        this.currentPlayerElement.textContent = 'Jij wint!';
+                    } else {
+                        alert('Computer wint! 🤖');
+                        this.currentPlayerElement.textContent = 'Computer wint!';
+                    }
+                }
+                
+                resetGame() {
+                    this.gameBoard = ['', '', '', '', '', '', '', '', ''];
+                    this.gameActive = true;
+                    this.isPlayerTurn = true;
+                    this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                    this.cells.forEach(cell => {
+                        cell.textContent = '';
+                        cell.style.color = '#fff';
+                    });
+                }
+            }
+            
+            // Initialize Tic Tac Toe game
+            let ticTacToeGame;
+
+            cells.forEach(cell => cell.addEventListener('click', (e) => {
+                if (ticTacToeGame) {
+                    ticTacToeGame.handleCellClick(e);
+                }
+            }));
+            restartBtn.addEventListener('click', () => {
+                if (ticTacToeGame) {
+                    ticTacToeGame.resetGame();
+                }
+            });
+
+            // Initialize Tic Tac Toe game
+            if (document.getElementById('tictactoe-current')) {
+                ticTacToeGame = new TicTacToeGame();
+            }
+
+            // Memory Game
+            const memoryCards = ['🐶', '🐱', '🐰', '🐸', '🦊', '🐧', '🐨', '🐯'];
+            let memoryBoard = [];
+            let flippedCards = [];
+            let attempts = 0;
+            let foundPairs = 0;
+
+            function shuffleArray(array) {
+                const shuffled = [...array];
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
+                return shuffled;
+            }
+
+            function createMemoryBoard() {
+                const cardPairs = [...memoryCards, ...memoryCards];
+                memoryBoard = shuffleArray(cardPairs);
+                
+                const boardElement = document.getElementById('memory-board');
+                boardElement.innerHTML = '';
+                
+                memoryBoard.forEach((card, index) => {
+                    const cardElement = document.createElement('div');
+                    cardElement.className = 'memory-card';
+                    cardElement.dataset.index = index;
+                    cardElement.dataset.card = card;
+                    cardElement.textContent = '?';
+                    cardElement.addEventListener('click', handleMemoryCardClick);
+                    boardElement.appendChild(cardElement);
+                });
+            }
+
+            function handleMemoryCardClick(e) {
+                const card = e.target;
+                const index = card.dataset.index;
+                
+                if (flippedCards.length >= 2 || card.classList.contains('flipped')) return;
+                
+                card.textContent = card.dataset.card;
+                card.classList.add('flipped');
+                flippedCards.push(card);
+                
+                if (flippedCards.length === 2) {
+                    attempts++;
+                    document.getElementById('memory-attempts').textContent = attempts;
+                    
+                    setTimeout(() => {
+                        if (flippedCards[0].dataset.card === flippedCards[1].dataset.card) {
+                            flippedCards.forEach(c => c.classList.add('matched'));
+                            foundPairs++;
+                            document.getElementById('memory-found').textContent = `${foundPairs} / 8`;
+                            
+                            if (foundPairs === 8) {
+                                setTimeout(() => alert(`Gefeliciteerd! Je hebt alle paren gevonden in ${attempts} pogingen!`), 100);
+                            }
+                        } else {
+                            flippedCards.forEach(c => {
+                                c.textContent = '?';
+                                c.classList.remove('flipped');
+                            });
+                        }
+                        flippedCards = [];
+                    }, 1000);
+                }
+            }
+
+            function resetMemoryGame() {
+                attempts = 0;
+                foundPairs = 0;
+                flippedCards = [];
+                document.getElementById('memory-attempts').textContent = '0';
+                document.getElementById('memory-found').textContent = '0 / 8';
+                createMemoryBoard();
+            }
+
+            document.getElementById('memoryStartBtn').addEventListener('click', resetMemoryGame);
+            
+        });
+    </script>
+    <script>
+        // Fixed script for all games
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tic Tac Toe Game
+            if (document.getElementById('tictactoe-current')) {
+                class TicTacToeGame {
+                    constructor() {
+                        this.gameBoard = ['', '', '', '', '', '', '', '', ''];
+                        this.gameActive = true;
+                        this.isPlayerTurn = true;
+                        this.cells = document.querySelectorAll('.cell');
+                        this.currentPlayerElement = document.getElementById('tictactoe-current');
+                        this.restartBtn = document.getElementById('tictactoeStartBtn');
+                        
+                        this.init();
+                    }
+                    
+                    init() {
+                        this.cells.forEach(cell => cell.addEventListener('click', (e) => this.handleCellClick(e)));
+                        this.restartBtn.addEventListener('click', () => this.resetGame());
+                        this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                    }
+                    
+                    checkWinner(board = this.gameBoard) {
+                        const winPatterns = [
+                            [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
+                            [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
+                            [0, 4, 8], [2, 4, 6] // diagonals
+                        ];
+
+                        for (let pattern of winPatterns) {
+                            const [a, b, c] = pattern;
+                            if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                                return board[a];
+                            }
+                        }
+
+                        if (!board.includes('')) {
+                            return 'tie';
+                        }
+
+                        return null;
+                    }
+                    
+                    minimax(board, depth, isMaximizing) {
+                        const scores = { 'X': -1, 'O': 1, 'tie': 0 };
+                        
+                        const winner = this.checkWinner(board);
+                        if (winner !== null) {
+                            return scores[winner];
+                        }
+
+                        if (isMaximizing) {
+                            let bestScore = -Infinity;
+                            for (let i = 0; i < 9; i++) {
+                                if (board[i] === '') {
+                                    board[i] = 'O';
+                                    let score = this.minimax(board, depth + 1, false);
+                                    board[i] = '';
+                                    bestScore = Math.max(score, bestScore);
+                                }
+                            }
+                            return bestScore;
+                        } else {
+                            let bestScore = Infinity;
+                            for (let i = 0; i < 9; i++) {
+                                if (board[i] === '') {
+                                    board[i] = 'X';
+                                    let score = this.minimax(board, depth + 1, true);
+                                    board[i] = '';
+                                    bestScore = Math.min(score, bestScore);
+                                }
+                            }
+                            return bestScore;
+                        }
+                    }
+                    
+                    computerMove() {
+                        if (!this.gameActive || this.isPlayerTurn) return;
+                        
+                        this.currentPlayerElement.textContent = 'Computer denkt...';
+                        
+                        setTimeout(() => {
+                            let bestScore = -Infinity;
+                            let bestMove = 0;
+                            
+                            for (let i = 0; i < 9; i++) {
+                                if (this.gameBoard[i] === '') {
+                                    const boardCopy = [...this.gameBoard];
+                                    boardCopy[i] = 'O';
+                                    let score = this.minimax(boardCopy, 0, false);
+                                    if (score > bestScore) {
+                                        bestScore = score;
+                                        bestMove = i;
+                                    }
+                                }
+                            }
+                            
+                            this.gameBoard[bestMove] = 'O';
+                            this.cells[bestMove].textContent = 'O';
+                            this.cells[bestMove].style.color = '#ff6b6b';
+                            
+                            const winner = this.checkWinner();
+                            if (winner) {
+                                this.endGame(winner);
+                                return;
+                            }
+                            
+                            this.isPlayerTurn = true;
+                            this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                        }, 500);
+                    }
+                    
+                    handleCellClick(e) {
+                        const index = e.target.dataset.index;
+                        
+                        if (this.gameBoard[index] !== '' || !this.gameActive || !this.isPlayerTurn) return;
+
+                        this.gameBoard[index] = 'X';
+                        e.target.textContent = 'X';
+                        e.target.style.color = '#64ffda';
+
+                        const winner = this.checkWinner();
+                        if (winner) {
+                            this.endGame(winner);
+                            return;
+                        }
+
+                        this.isPlayerTurn = false;
+                        this.computerMove();
+                    }
+                    
+                    endGame(winner) {
+                        this.gameActive = false;
+                        if (winner === 'tie') {
+                            alert('Gelijkspel!');
+                            this.currentPlayerElement.textContent = 'Gelijkspel!';
+                        } else if (winner === 'X') {
+                            alert('Je hebt gewonnen! 🎉');
+                            this.currentPlayerElement.textContent = 'Jij wint!';
+                        } else {
+                            alert('Computer wint! 🤖');
+                            this.currentPlayerElement.textContent = 'Computer wint!';
+                        }
+                    }
+                    
+                    resetGame() {
+                        this.gameBoard = ['', '', '', '', '', '', '', '', ''];
+                        this.gameActive = true;
+                        this.isPlayerTurn = true;
+                        this.currentPlayerElement.textContent = 'Jouw beurt (X)';
+                        this.cells.forEach(cell => {
+                            cell.textContent = '';
+                            cell.style.color = '#fff';
+                        });
+                    }
+                }
+                
+                new TicTacToeGame();
+            }
+
+            // Memory Game
+            if (document.getElementById('memory-board')) {
+                const memoryCards = ['🐶', '🐱', '🐰', '🐸', '🦊', '🐧', '🐨', '🐯'];
+                let memoryBoard = [];
+                let flippedCards = [];
+                let attempts = 0;
+                let foundPairs = 0;
+
+                function shuffleArray(array) {
+                    const shuffled = [...array];
+                    for (let i = shuffled.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                    }
+                    return shuffled;
+                }
+
+                function createMemoryBoard() {
+                    const cardPairs = [...memoryCards, ...memoryCards];
+                    memoryBoard = shuffleArray(cardPairs);
+                    
+                    const boardElement = document.getElementById('memory-board');
+                    boardElement.innerHTML = '';
+                    
+                    memoryBoard.forEach((card, index) => {
+                        const cardElement = document.createElement('div');
+                        cardElement.className = 'memory-card';
+                        cardElement.dataset.index = index;
+                        cardElement.dataset.card = card;
+                        cardElement.textContent = '?';
+                        cardElement.addEventListener('click', handleMemoryCardClick);
+                        boardElement.appendChild(cardElement);
+                    });
+                }
+
+                function handleMemoryCardClick(e) {
+                    const card = e.target;
+                    
+                    if (flippedCards.length >= 2 || card.classList.contains('flipped') || card.classList.contains('matched')) return;
+                    
+                    card.textContent = card.dataset.card;
+                    card.classList.add('flipped');
+                    flippedCards.push(card);
+                    
+                    if (flippedCards.length === 2) {
+                        attempts++;
+                        document.getElementById('memory-attempts').textContent = attempts;
+                        
+                        setTimeout(() => {
+                            if (flippedCards[0].dataset.card === flippedCards[1].dataset.card) {
+                                flippedCards.forEach(c => c.classList.add('matched'));
+                                foundPairs++;
+                                document.getElementById('memory-found').textContent = `${foundPairs} / 8`;
+                                
+                                if (foundPairs === 8) {
+                                    setTimeout(() => alert(`Gefeliciteerd! Je hebt alle paren gevonden in ${attempts} pogingen!`), 100);
+                                }
+                            } else {
+                                flippedCards.forEach(c => {
+                                    c.textContent = '?';
+                                    c.classList.remove('flipped');
+                                });
+                            }
+                            flippedCards = [];
+                        }, 1000);
+                    }
+                }
+
+                function resetMemoryGame() {
+                    attempts = 0;
+                    foundPairs = 0;
+                    flippedCards = [];
+                    document.getElementById('memory-attempts').textContent = '0';
+                    document.getElementById('memory-found').textContent = '0 / 8';
+                    createMemoryBoard();
+                }
+
+                document.getElementById('memoryStartBtn').addEventListener('click', resetMemoryGame);
+                
+                // Initialize memory game
+                createMemoryBoard();
+            }
+        });
+    </script>
+</body>
+</html>

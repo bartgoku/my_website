@@ -1,0 +1,415 @@
+/* Games page specific styling */
+.games-hero {
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+    color: white;
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.games-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #64ffda, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.games-section {
+    padding: 60px 0;
+    background: #f8fafc;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.iframe-game {
+    padding: 1.5rem;
+}
+
+.game-iframe-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+.game-iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Game Links Styling */
+.link-card {
+    background: linear-gradient(135deg, #64ffda, #00bcd4);
+    color: white;
+}
+
+.link-card h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.link-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+.game-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.game-link {
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.game-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h2 {
+    color: #1a2332;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.game-card p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Tetris Game Styling */
+.tetris-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#tetris {
+    border: 3px solid #1a2332;
+    border-radius: 8px;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 200px;
+}
+
+.next-piece-container {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 2px solid #64ffda;
+    text-align: center;
+}
+
+.next-piece-container h3 {
+    margin: 0 0 0.5rem 0;
+    color: #1a2332;
+    font-size: 1rem;
+}
+
+#nextPiece {
+    border: 1px solid #1a2332;
+    border-radius: 4px;
+    background: #000;
+}
+
+.score, .level, .lines {
+    background: linear-gradient(135deg, #64ffda, #00bcd4);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game-btn {
+    background: linear-gradient(135deg, #0f1419, #1a2332);
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.game-btn:hover {
+    background: linear-gradient(135deg, #1a2332, #2d3748);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+}
+
+.game-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.controls {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.controls h3 {
+    color: #1a2332;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.controls p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Navigation active state for games page */
+.nav-menu a.active {
+    color: #64ffda;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .games-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .game-card, .iframe-game {
+        padding: 1rem;
+    }
+    
+    .tetris-container,
+    .snake-container,
+    .pacman-container,
+    .pong-container,
+    .tictactoe-container,
+    .memory-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #tetris {
+        width: 250px;
+        height: 500px;
+    }
+    
+    .snake-container canvas,
+    .pacman-container canvas {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .pong-container canvas {
+        width: 300px;
+        height: 225px;
+    }
+    
+    .game-info {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .game-iframe-container iframe {
+        width: 100%;
+        height: 350px;
+    }
+    
+    .tictactoe-board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+    }
+    
+    .memory-board {
+        grid-template-columns: repeat(4, 50px);
+        grid-template-rows: repeat(4, 50px);
+    }
+}
+
+@media (max-width: 480px) {
+    .game-card, .iframe-game {
+        padding: 0.75rem;
+    }
+    
+    #tetris {
+        width: 200px;
+        height: 400px;
+    }
+    
+    .snake-container canvas,
+    .pacman-container canvas {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .pong-container canvas {
+        width: 250px;
+        height: 188px;
+    }
+    
+    .game-iframe-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .tictactoe-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+    
+    .memory-board {
+        grid-template-columns: repeat(4, 45px);
+        grid-template-rows: repeat(4, 45px);
+    }
+    
+    .cell {
+        font-size: 24px;
+    }
+    
+    .memory-card {
+        font-size: 18px;
+    }
+}
+
+/* Game-specific containers */
+.snake-container,
+.pacman-container,
+.pong-container,
+.tictactoe-container,
+.memory-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.snake-container canvas,
+.pacman-container canvas,
+.pong-container canvas {
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Tic Tac Toe Styles */
+.tictactoe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 5px;
+    background: #1a2332;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cell {
+    background: #0f1419;
+    border: 2px solid #64ffda;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.cell:hover {
+    background: #1a2332;
+    border-color: #00bcd4;
+    transform: scale(1.05);
+}
+
+/* Memory Game Styles */
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(4, 60px);
+    gap: 8px;
+    background: #1a2332;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.memory-card {
+    background: #0f1419;
+    border: 2px solid #64ffda;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.memory-card:hover {
+    background: #1a2332;
+    border-color: #00bcd4;
+    transform: scale(1.05);
+}
+
+.memory-card.flipped {
+    background: #64ffda;
+    color: #0f1419;
+    border-color: #64ffda;
+}
+
+.memory-card.matched {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: #fff;
+    cursor: default;
+}
+
+.memory-card.matched:hover {
+    transform: none;
+}
