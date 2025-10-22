@@ -35,13 +35,13 @@ class TetrisGame {
         
         this.colors = [
             '#000000', // Empty
-            '#FF0000', // I-piece (red)
-            '#00FF00', // O-piece (green)
-            '#0000FF', // T-piece (blue)
-            '#FFFF00', // S-piece (yellow)
-            '#FF00FF', // Z-piece (magenta)
-            '#00FFFF', // J-piece (cyan)
-            '#FFA500'  // L-piece (orange)
+            '#00FFFF', // I-piece (cyan) - lange lijn
+            '#FFFF00', // O-piece (yellow) - vierkant
+            '#800080', // T-piece (purple) - T-vorm  
+            '#00FF00', // S-piece (green) - S-vorm
+            '#FF0000', // Z-piece (red) - Z-vorm
+            '#0000FF', // J-piece (blue) - J-vorm
+            '#FFA500'  // L-piece (orange) - L-vorm
         ];
         
         this.pieces = [
@@ -440,8 +440,19 @@ class TetrisGame {
         for (let y = 0; y < this.nextPiece.shape.length; y++) {
             for (let x = 0; x < this.nextPiece.shape[y].length; x++) {
                 if (this.nextPiece.shape[y][x] !== 0) {
+                    // Fill the block
                     nextCtx.fillStyle = this.colors[this.nextPiece.shape[y][x]];
                     nextCtx.fillRect(
+                        offsetX + x * blockSize,
+                        offsetY + y * blockSize,
+                        blockSize,
+                        blockSize
+                    );
+                    
+                    // Draw border for better visibility
+                    nextCtx.strokeStyle = '#FFFFFF';
+                    nextCtx.lineWidth = 1;
+                    nextCtx.strokeRect(
                         offsetX + x * blockSize,
                         offsetY + y * blockSize,
                         blockSize,
@@ -456,8 +467,19 @@ class TetrisGame {
         for (let y = 0; y < this.boardHeight; y++) {
             for (let x = 0; x < this.boardWidth; x++) {
                 if (this.board[y][x] !== 0) {
+                    // Fill the block
                     this.ctx.fillStyle = this.colors[this.board[y][x]];
                     this.ctx.fillRect(
+                        x * this.blockSize,
+                        y * this.blockSize,
+                        this.blockSize,
+                        this.blockSize
+                    );
+                    
+                    // Draw border for better visibility
+                    this.ctx.strokeStyle = '#FFFFFF';
+                    this.ctx.lineWidth = 1;
+                    this.ctx.strokeRect(
                         x * this.blockSize,
                         y * this.blockSize,
                         this.blockSize,
@@ -472,8 +494,19 @@ class TetrisGame {
         for (let y = 0; y < piece.shape.length; y++) {
             for (let x = 0; x < piece.shape[y].length; x++) {
                 if (piece.shape[y][x] !== 0) {
+                    // Fill the block
                     this.ctx.fillStyle = this.colors[piece.shape[y][x]];
                     this.ctx.fillRect(
+                        (piece.x + x) * this.blockSize,
+                        (piece.y + y) * this.blockSize,
+                        this.blockSize,
+                        this.blockSize
+                    );
+                    
+                    // Draw border for better visibility
+                    this.ctx.strokeStyle = '#FFFFFF';
+                    this.ctx.lineWidth = 1;
+                    this.ctx.strokeRect(
                         (piece.x + x) * this.blockSize,
                         (piece.y + y) * this.blockSize,
                         this.blockSize,
