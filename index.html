@@ -368,6 +368,60 @@
                     <div class="resume-section-block">
                         <h3>Interesses & Hobby's</h3>
                         <p>Hockey, fietsen, reizen, podcasts, nieuws, politiek</p>
+                        <div class="carousel">
+  <img class="slide active" src="logos/F5902586-F983-4307-8110-AACF0FF1719B_1_105_c.jpeg" alt="fiets">
+  <img class="slide" src="logos/kampioen.jpeg" alt="kampioen">
+
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+</div>
+
+<style>
+.carousel {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+</style>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function moveSlide(n) {
+  slides[slideIndex].classList.remove('active');
+  slideIndex = (slideIndex + n + slides.length) % slides.length;
+  slides[slideIndex].classList.add('active');
+}
+</script>
+                                        
                     </div>
                 </div>
             </div>
