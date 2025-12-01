@@ -52,3 +52,5 @@
 	Verify that README.md and the copilot-instructions.md file in the .github directory exists and contains current project information.
 	Clean up the copilot-instructions.md file in the .github directory by removing all HTML comments.
 	 -->
+
+- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_best_practices` tool if available.
