@@ -59,6 +59,35 @@ class PongGame {
                 e.preventDefault();
             }
         });
+        
+        // Touch controls for mobile
+        const touchControls = document.querySelectorAll('#pongTouchControls .touch-btn');
+        touchControls.forEach(btn => {
+            btn.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                const direction = btn.dataset.direction;
+                if (direction === 'up') this.keys['ArrowUp'] = true;
+                if (direction === 'down') this.keys['ArrowDown'] = true;
+            });
+            
+            btn.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                const direction = btn.dataset.direction;
+                if (direction === 'up') this.keys['ArrowUp'] = false;
+                if (direction === 'down') this.keys['ArrowDown'] = false;
+            });
+            
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const direction = btn.dataset.direction;
+                if (direction === 'up') this.keys['ArrowUp'] = true;
+                if (direction === 'down') this.keys['ArrowDown'] = true;
+                setTimeout(() => {
+                    this.keys['ArrowUp'] = false;
+                    this.keys['ArrowDown'] = false;
+                }, 100);
+            });
+        });
     }
     
     startGame() {

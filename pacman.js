@@ -224,6 +224,34 @@ class PacManGame {
                     break;
             }
         });
+        
+        // Touch controls for mobile
+        const touchControls = document.querySelectorAll('#pacmanTouchControls .touch-btn');
+        touchControls.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (!this.gameRunning) return;
+                e.preventDefault();
+                const direction = btn.dataset.direction;
+                this.handleTouchDirection(direction);
+            });
+        });
+    }
+    
+    handleTouchDirection(direction) {
+        switch(direction) {
+            case 'up':
+                this.pacman.direction = {x: 0, y: -1};
+                break;
+            case 'down':
+                this.pacman.direction = {x: 0, y: 1};
+                break;
+            case 'left':
+                this.pacman.direction = {x: -1, y: 0};
+                break;
+            case 'right':
+                this.pacman.direction = {x: 1, y: 0};
+                break;
+        }
     }
     
     startGame() {

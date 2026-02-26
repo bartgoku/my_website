@@ -176,6 +176,40 @@ class TetrisGame {
                     break;
             }
         });
+
+        // Touch controls
+        const touchControls = document.getElementById('tetrisTouchControls');
+        if (touchControls) {
+            const buttons = touchControls.querySelectorAll('.touch-btn');
+            buttons.forEach(button => {
+                const handleAction = (e) => {
+                    e.preventDefault();
+                    if (!this.gameRunning || this.gamePaused) return;
+                    
+                    const action = button.getAttribute('data-action');
+                    switch(action) {
+                        case 'left':
+                            this.movePiece(-1, 0);
+                            break;
+                        case 'right':
+                            this.movePiece(1, 0);
+                            break;
+                        case 'down':
+                            this.movePiece(0, 1);
+                            break;
+                        case 'rotate':
+                            this.rotatePiece();
+                            break;
+                        case 'drop':
+                            this.dropPiece();
+                            break;
+                    }
+                };
+                
+                button.addEventListener('click', handleAction);
+                button.addEventListener('touchstart', handleAction);
+            });
+        }
     }
     
     toggleMute() {

@@ -36,6 +36,63 @@
     text-align: center;
 }
 
+/* Touch Controls for Mobile */
+.touch-controls {
+    display: none;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.touch-controls-grid {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left down right"
+        "action action action";
+    gap: 0.5rem;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.touch-btn {
+    padding: 15px;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.1s;
+}
+
+.touch-btn:active {
+    transform: scale(0.95);
+    background: #0097a7;
+}
+
+.touch-btn-up { grid-area: up; }
+.touch-btn-down { grid-area: down; }
+.touch-btn-left { grid-area: left; }
+.touch-btn-right { grid-area: right; }
+.touch-btn-action { grid-area: action; }
+
+@media (max-width: 768px) {
+    .touch-controls {
+        display: block;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 .iframe-game {
     padding: 1.5rem;
 }

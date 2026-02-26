@@ -53,6 +53,42 @@ class SnakeGame {
                     break;
             }
         });
+        
+        // Touch controls for mobile
+        const touchControls = document.querySelectorAll('#snakeTouchControls .touch-btn');
+        touchControls.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (!this.gameRunning) return;
+                e.preventDefault();
+                const direction = btn.dataset.direction;
+                this.handleTouchDirection(direction);
+            });
+        });
+    }
+    
+    handleTouchDirection(direction) {
+        switch(direction) {
+            case 'up':
+                if (this.direction.y === 0) {
+                    this.direction = {x: 0, y: -this.gridSize};
+                }
+                break;
+            case 'down':
+                if (this.direction.y === 0) {
+                    this.direction = {x: 0, y: this.gridSize};
+                }
+                break;
+            case 'left':
+                if (this.direction.x === 0) {
+                    this.direction = {x: -this.gridSize, y: 0};
+                }
+                break;
+            case 'right':
+                if (this.direction.x === 0) {
+                    this.direction = {x: this.gridSize, y: 0};
+                }
+                break;
+        }
     }
     
     startGame() {
