@@ -901,20 +901,21 @@ footer {
     .nav-container {
         flex-direction: column;
         gap: 0.5rem;
-        padding: 0 15px;
+        padding: 0 20px;
     }
     
     .nav-menu {
-        gap: 1rem;
+        gap: 0.7rem;
         flex-wrap: wrap;
         justify-content: center;
-        font-size: 0.85rem;
-        padding: 0 10px;
+        font-size: 0.8rem;
+        padding: 0;
+        width: 100%;
     }
     
     .nav-menu a {
-        font-size: 0.85rem;
-        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.4rem;
     }
     
     .hero-content h2 {
