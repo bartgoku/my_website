@@ -329,11 +329,9 @@ header {
 }
 
 .company-logo {
-    max-width: 500px;
     width: 100%;
-    max-height: 200px;
-    margin-bottom: 1.5rem;
-    object-fit: contain;
+    height: auto;
+    margin: 0 0 1.5rem 0;
     display: block;
 }
 
